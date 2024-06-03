@@ -1,0 +1,244 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+    <style type="text/css">
+        :root {
+            background-image: linear-gradient(90deg, lightgrey 0%, blue 60%);
+            --color-in: radial-gradient(circle, white, lightgrey, darkgrey, grey, grey);
+            --cube-sizer: 200px;
+            --cube-sizer-perspective: 400px;
+        }
+
+        #cube-container {
+            position: fixed;
+            top: 10%;
+            right: 5%;
+            margin: 60px;
+            width: var(--cube-sizer);
+            height: var(--cube-sizer);
+            perspective: var(--cube-sizer-perspective);
+            z-index: 100;
+        }
+
+        #cube {
+            width: var(--cube-sizer);
+            height: var(--cube-sizer);
+            position: fixed;
+            transform-style: preserve-3d;
+        }
+
+        #cube-front {
+            background: var(--color-in);
+            transform: rotateY(0deg) translateZ(100px);
+        }
+
+        #cube-back {
+            background: var(--color-in);
+            transform: rotateY(180deg) translateZ(100px);
+        }
+
+        #cube-right {
+            background: var(--color-in);
+            transform: rotateY(90deg) translateZ(100px);
+        }
+
+        #cube-left {
+            background: var(--color-in);
+            transform: rotateY(-90deg) translateZ(100px);
+        }
+
+        #cube-top {
+            background: var(--color-in);
+            transform: rotateX(90deg) translateZ(100px);
+        }
+
+        #cube-bottom {
+            background: var(--color-in);
+            transform: rotateX(-90deg) translateZ(100px);
+        }
+
+        .cube-face {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            width: var(--cube-sizer);
+            height: var(--cube-sizer);
+            color: #000;
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla auctor risus ut lacus maximus, at
+            venenatis<br>
+            quam mattis. Sed vitae egestas dolor, eu consectetur felis. Fusce vitae neque id lectus tincidunt
+            gravida.<br>
+            Sed pharetra purus nec neque interdum consequat. Sed ut ipsum rhoncus, rutrum sapien vel, dapibus ante.<br>
+            Phasellus facilisis, est ultrices facilisis tempus, sem odio mattis lacus, ac euismod massa urna nec
+            purus.<br>
+            Cras consequat nisl ac mattis blandit. Suspendisse potenti.
+        </p>
+        <p>
+            Duis vitae volutpat leo. Donec nec dapibus nulla. Aliquam erat volutpat. Sed in quam eu ex lacinia
+            ornare.<br>
+            Mauris sed massa ut erat varius convallis. Nullam porttitor tincidunt lectus et finibus. In hac
+            habitasse<br>
+            platea dictumst. Suspendisse euismod iaculis rutrum. Suspendisse venenatis eget urna sit amet semper.
+            Duis<br>
+            vitae pellentesque erat, et pharetra purus. Proin lacinia tempus augue ut fermentum. Nam suscipit turpis
+            vel<br>
+            metus maximus dapibus. Sed sit amet ante commodo ante varius vehicula. Praesent tellus nibh, rhoncus ac<br>
+            tincidunt vel, suscipit non sem. In tempor felis in erat tempor, nec bibendum libero hendrerit.
+        </p>
+        <p>
+            Nunc sollicitudin at erat et venenatis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices<br>
+            posuere cubilia curae; Nullam elementum facilisis dolor, euismod cursus ante lacinia vitae. Phasellus<br>
+            vulputate gravida ultrices. Vivamus imperdiet libero eget eros facilisis pharetra vitae et velit.
+            Vestibulum<br>
+            ullamcorper placerat mauris eget luctus. Integer commodo sagittis neque eget blandit. Donec fermentum
+            mattis<br>
+            nulla, et ornare neque bibendum at. Vivamus ac risus eget sem finibus rhoncus at id massa. Pellentesque<br>
+            mauris sem, pellentesque sit amet placerat a, dapibus laoreet lacus.
+        </p>
+        <p>
+            Mauris vel felis id libero maximus pellentesque. Sed finibus hendrerit mauris vitae vestibulum. Sed<br>
+            imperdiet sollicitudin nisl vitae vestibulum. Suspendisse varius magna erat, vitae fringilla ex semper
+            ac.<br>
+            Vestibulum et odio tempus, fringilla velit ac, condimentum diam. Ut auctor semper urna, vitae venenatis<br>
+            ligula dignissim in. Nulla a mauris suscipit, dictum risus porttitor, lobortis turpis. Vestibulum ante
+            ipsum<br>
+            primis in faucibus orci luctus et ultrices posuere cubilia curae;
+        </p>
+        <p>
+            Mauris elementum convallis pharetra. Sed pharetra, ex at lobortis eleifend, tellus lacus venenatis quam,
+            in<br>
+            tincidunt felis leo vel ante. Vivamus quis rhoncus enim. In luctus luctus turpis, ac porttitor augue
+            lacinia<br>
+            eget. Nulla facilisi. Vivamus nec blandit tellus, tempor gravida lorem. In hac habitasse platea dictumst.
+            Ut<br>
+            gravida scelerisque nibh nec scelerisque. Maecenas et consectetur magna, auctor venenatis mi. Morbi quis<br>
+            nisl iaculis, tempus neque in, imperdiet enim. Ut nec metus velit. Morbi sit amet maximus urna, ut
+            porttitor<br>
+            diam. Morbi tellus ante, sagittis at volutpat et, molestie at turpis. Duis ullamcorper, nibh in
+            pellentesque<br>
+            scelerisque, ex nisi auctor est, sit amet fermentum massa nulla vitae sem.
+        </p>
+        <p>
+            Ut accumsan maximus odio, nec ullamcorper lectus rutrum quis. Nullam blandit vulputate lorem. Nunc<br>
+            vestibulum elit eget aliquet iaculis. Nulla sed arcu sit amet erat ornare vulputate. Sed ultrices
+            gravida<br>
+            quam sit amet pellentesque. Fusce ornare arcu maximus erat tempus, at vehicula elit varius. Sed eleifend
+            at<br>
+            tellus a ornare. Vivamus non velit dictum, placerat nulla sodales, pellentesque nisi. Phasellus iaculis<br>
+            vestibulum sapien id ullamcorper. In hac habitasse platea dictumst. Maecenas eros ex, condimentum nec<br>
+            consectetur pretium, vestibulum nec sem. Ut tincidunt venenatis ex eu lobortis. Cras pellentesque nunc
+            in<br>
+            leo efficitur fermentum.
+        </p>
+        <p>
+            Donec efficitur sem vel quam faucibus dapibus. Praesent dui orci, lobortis ultrices dolor nec, rhoncus<br>
+            efficitur dui. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.<br>
+            Curabitur facilisis felis sed viverra condimentum. Sed eu elit sagittis lacus ornare iaculis. Curabitur<br>
+            dictum arcu et accumsan vehicula. Nam eget dui gravida justo finibus mattis sed vel urna. Aliquam
+            feugiat,<br>
+            lacus eu interdum efficitur, felis elit ultricies ante, vitae efficitur ipsum purus a nulla. Sed
+            accumsan<br>
+            est faucibus, malesuada risus pellentesque, fermentum velit. Nam elementum magna vel cursus aliquet.<br>
+            Phasellus non tristique sapien. Nullam imperdiet tincidunt odio, in semper eros feugiat nec. Fusce nec
+            quam<br>
+            in erat faucibus efficitur.
+        </p>
+        <p>
+            Duis ultricies turpis odio, ut semper eros varius eget. Donec posuere ut est ac lobortis. Pellentesque
+            non<br>
+            ipsum vel velit lobortis consectetur. Sed euismod, tortor a posuere ultrices, ante urna scelerisque ex,
+            et<br>
+            cursus ante ex a lacus. Mauris vehicula lacus nec eros viverra facilisis. Vestibulum quis eros eu lectus<br>
+            dignissim semper quis ut mi. Vivamus mattis purus at ullamcorper faucibus. Maecenas risus est, volutpat
+            ac<br>
+            sapien sit amet, convallis porttitor lacus. Phasellus vestibulum iaculis imperdiet. Aliquam sit amet
+            elit<br>
+            eros.
+        </p>
+        <p>
+            Sed ultricies, sem a sagittis semper, metus tellus rhoncus sem, id molestie felis enim vel nisi. Morbi
+            sit<br>
+            amet posuere est, at commodo dui. Suspendisse aliquam cursus consequat. Nunc aliquet sit amet arcu id<br>
+            imperdiet. Vivamus eleifend, massa at posuere interdum, sapien enim malesuada mauris, ut fermentum magna<br>
+            elit ut arcu. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque, odio nec
+            dapibus<br>
+            ultricies, sem massa condimentum augue, non rhoncus sem nunc sed mauris. Sed eget tincidunt lectus.
+            Class<br>
+            aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nullam fringilla<br>
+            commodo mattis. Phasellus vulputate odio vestibulum nisi aliquam ornare.
+        </p>
+        <p>
+            Suspendisse malesuada fermentum mauris. Vestibulum quis sapien tristique, aliquet sapien sit amet,
+            fringilla<br>
+            massa. Mauris eget elementum ex. Aenean eu justo id odio finibus pulvinar. Orci varius natoque penatibus
+            et<br>
+            magnis dis parturient montes, nascetur ridiculus mus. Aenean dapibus sollicitudin sem, ut viverra leo
+            tempor<br>
+            vitae. Morbi efficitur egestas posuere. Integer posuere nunc hendrerit ligula fermentum gravida.
+        </p>
+    </div>
+    <div id="cube-container" style="user-select: none;">
+        <div id="cube" style="transform: translateZ(-100px) rotateX(12deg) rotateY(-14deg);">
+            <div class="cube-face" id="cube-front"><img draggable="false" width="190"
+                    src="https://64.media.tumblr.com/10aa28afcbe7da09ee4efe5dbe9a252f/0d8082abc2fd6f94-38/s250x400/aeaeaa3e0b87ecd1a84ddd7d22fb62b3fd8fa2e9.gifv">
+            </div>
+            <div class="cube-face" id="cube-back"><img draggable="false" width="190"
+                    src="https://64.media.tumblr.com/52782d8fcdca040b9146bb4563e9e844/0d8082abc2fd6f94-d3/s250x400/d7bbc12dd690ff2063d94eeffdf0d29931899e04.gifv">
+            </div>
+            <div class="cube-face" id="cube-right"><img draggable="false" width="190"
+                    src="https://64.media.tumblr.com/246e39c2dfae1cb369873728bca0b77a/d3abe813af06eb03-f9/s100x200/6979253da882e8dd437009b1186700e3ec153fbc.gifv">
+            </div>
+            <div class="cube-face" id="cube-left"><img draggable="false" width="190"
+                    src="https://64.media.tumblr.com/b0b8182e3216c710e5c4d2251201af49/c4a7a5ecdea47622-1b/s100x200/d343c1f69e1a0c08a1b1002cf2657ece439c594f.gifv">
+            </div>
+            <div class="cube-face" id="cube-top"><img draggable="false" width="190"
+                    src="https://64.media.tumblr.com/a764cb98066fe0cb8c84cb5b975dcbf9/501b1b90fa7f3900-a8/s100x200/d55abee9db53a3044c268a9a9723e2861439d647.gifv">
+            </div>
+            <div class="cube-face" id="cube-bottom"><img draggable="false" width="190"
+                    src="https://64.media.tumblr.com/689184120cb80df0b5adaa117bb63746/7c85a8258373f2fe-9d/s250x400/9984ed34734de77d942d0e25bbc2ad4aefe3e0e3.gifv">
+            </div>
+        </div>
+    </div>
+    <script>
+        let rotating = false;
+        let curr_rot = [0, 0];
+        let prev_mouse_pos = [0, 0];
+        let curr_mouse_pos = [0, 0];
+        const container = document.getElementById("cube-container");
+        const cube = document.getElementById("cube");
+        const rot_scale = 0.4;
+
+        container.addEventListener("mousedown", (event) => {
+            rotating = true;
+            prev_mouse_pos = [event.screenY, event.screenX];
+        });
+
+        document.addEventListener("mousemove", (event) => {
+
+            if (rotating) {
+                curr_mouse_pos = [event.screenY, event.screenX];
+                curr_rot[0] += (curr_mouse_pos[0] - prev_mouse_pos[0]) * rot_scale;
+                curr_rot[1] += (curr_mouse_pos[1] - prev_mouse_pos[1]) * rot_scale;
+                cube.style.transform = "translateZ(-100px) rotateX(" + -curr_rot[0] + "deg) rotateY(" + curr_rot[1] + "deg)";
+                prev_mouse_pos = curr_mouse_pos;
+            }
+        });
+
+        document.addEventListener("mouseup", (event) => {
+            rotating = false;
+        });
+    </script>
+</body>
+
+</html>
